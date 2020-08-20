@@ -1,5 +1,6 @@
 package com.example.consumer;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -21,6 +22,7 @@ public class ConsumerApplication {
     @FeignClient("name")
     static interface NameService {
         @RequestMapping("/")
+        @SentinelResource("/")
         public String getName();
     }
 }
