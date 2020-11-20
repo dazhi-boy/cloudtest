@@ -1,0 +1,2 @@
+org.springframework.boot.SpringApplicationRunListener=\
+com.dazhi.nacos.nacos.core.code.StartingSpringApplicationRunListener
